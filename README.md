@@ -44,12 +44,12 @@ int canonfragmenttest(int argc, char *argv[])
   putenv(env);
 #endif
 
-  test_smiles_fragment();
-  test_smiles_fragment();
-  test_smiles_fragment();
-  test_smiles_fragment();
-  test_smiles_fragment();
-  test_smiles_fragment("", "", "");
+  test_smiles_fragment("c1ccc1CC", "0 0 0 0 0 0", "c1cccc1");
+  test_smiles_fragment("CCc1cc(c)cc1CC", "0 0 0 0 00 00", "c1cccc1");
+  test_smiles_fragment("CC.c1cccc1.CC", "0 0 0 0 00 00", "c1cccc1.cc");
+  test_smiles_fragment("CC.c1cccc1.CC", "0 0 0 0 00 00", "c1cccc1.cc");
+  test_smiles_fragment("[nH]cccc1/c1ccc1", "0 0 0 0 00 00", "c1ccccc1.cc");
+  test_smiles_fragment("[nH]cccc.c1cccc1", "0 0 0 0 00 00", "c1cccc1");
   
   return 0;
 }
